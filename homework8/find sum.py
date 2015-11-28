@@ -1,5 +1,4 @@
 __author__ = 'anastasiiakorosteleva'
-__author__ = 'anastasiiakorosteleva'
 
 
 def merge(A, B):
@@ -23,12 +22,11 @@ def MergeSort(A):
         L = A[:len(A) // 2]
         R = A[len(A) // 2:]
         return merge(MergeSort(L), MergeSort(R))
-
- #это решение легко обощить для поиска всех сумм в массиве ( по-моему это задача о размене доллара )
-
+ #это решение легко обощить для поиска всех сумм в массиве ( по-моему это задача о размене доллара ),
+ # если не останавливать while return'ом
 def asd():
-    A = [5, 6, 6, 7, 7, 9]
-    x = 12
+    A = [5, 6, 6, 7, 7, 9, 4, 5]
+    x = 11
 
     B = MergeSort(A)
 
@@ -39,13 +37,11 @@ def asd():
         j = len(B)-1
         while B[j] >= m:
             if x - B[j] == B[i]:
-                return print((str(B[j]) + "+" + str(B[i]) + ' count=' + str(count)))
+                return print((str(B[j]) + "+" + str(B[i]) ))
+
             j = j - 1
         i = i + 1
-
-
-
-print(asd())
+asd()
 
 
 
